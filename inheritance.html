@@ -1,0 +1,31 @@
+<script>
+
+    class Person{
+        constructor(name){
+            this.name = name;
+        }
+
+        toString(){
+          return (`Name is:${this.name}`);
+        }
+    }
+
+    class Student extends Person{
+        constructor(name, id){
+            super(name);
+            this.id = id;
+        }
+
+        details(){
+            console.log(`${super.toString()},StudentID:${this.id}`);
+        }
+    }
+
+    let student1 = new Student("Roshan","123");
+
+    student1.details();
+
+
+</script>
+
+<!-- For reference: https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript -->

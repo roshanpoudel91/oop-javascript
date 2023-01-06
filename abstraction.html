@@ -1,0 +1,28 @@
+<script>
+
+function Person(fname, lname){
+    let firstName = fname;
+    let lastName = lname;
+
+    let getDetails_noAccess = function(){
+        return (`First name is ${firstName}, Last name is ${lastName}`);
+    }
+
+    this.getDetails_access = function(){
+        return (`First name is ${firstName}, Last name is ${lastName}`);
+    }
+}
+
+let person1 = new Person("Roshan","Poudel");
+
+console.log(person1.getDetails_noAccess);
+
+console.log(person1.getDetails_access());
+
+console.log(person1.firstName);
+
+
+
+</script>
+
+<!-- For reference: https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript-->

@@ -1,0 +1,28 @@
+
+<script>
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    address(address) {
+        this.address = address;
+    }
+
+    get_details(){
+        console.log(`Name is ${this.name},Address is ${this.address}`);
+    }
+}
+
+let person1 = new Person("Roshan",29);
+
+person1.address("Edmonton");
+
+person1.get_details();
+
+</script>
+
+<!-- For references 
+https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript
+-->

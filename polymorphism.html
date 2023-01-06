@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        class Person {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            get name(){
+                return this._name;
+            }
+
+            set name(name){
+                this._name = name;
+            }
+
+            get age(){
+                return this._age;
+            }
+
+            set age(age){
+                this._age = age;
+            }
+
+            
+        }
+
+        class Student extends Person{
+            constructor(name,age,ID){
+                super(name,age);
+                
+                this.ID = ID;
+            }
+
+            toString(){
+                return (`My name is ${super.name}. I'm  ${super.age} years of old with 
+                        student ID: ${this.ID}`);
+            }
+        }
+
+        let student1 = new Student("Roshan",29,12345);
+
+        console.log(student1.toString());
+
+
+
+    </script>
+    
+    
+    <title>Polymorphism</title>
+</head>
+<body>
+    
+</body>
+</html>
